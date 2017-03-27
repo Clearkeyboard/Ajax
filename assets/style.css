@@ -1,0 +1,15 @@
+button,div,form,input {
+      margin: 10px;
+    }
+    #giphy-form{
+        float: right;
+    }
+    #giph{
+        float: left;
+    }
+    .row{
+        margin-top: 120px;
+    }
+    h5{
+        font-weight: bold;
+    }

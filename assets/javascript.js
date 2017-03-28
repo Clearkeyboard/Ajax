@@ -18,7 +18,7 @@
             console.log(queryURL);
           var data = response.data;  
           var giphyDiv = $("<div id='giph'>");
-          var pOne = $("<p>").text("Rating: " + data.rating);
+          var pOne = $("<p id='wraptext'>").text("Rating: " + data.rating);
           giphyDiv.append(pOne);
           var image = $("<img id='giphy'>").attr({src:data.images.fixed_height_still.url,
               still:data.images.fixed_height_still.url,
@@ -33,7 +33,7 @@
       function renderButtons() {
         $("#buttons-view").empty();
         for (var i = 0; i < giphys.length; i++) {
-          var a = $("<button>");
+          var a = $("<button class='btn btn-primary'>");
           a.addClass("giphy");
           a.attr("data-name", giphys[i]);
           a.text(giphys[i]);

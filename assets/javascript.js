@@ -3,14 +3,14 @@
       function displayGiphy() {
         $("#giphy-view").empty();
         var giphy = $(this).attr("data-name");
-        var getID = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg&tag=" + giphy;
+        var getID = "https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&rating=pg&tag=" + giphy;
         for (var u = 1; u  <11; u++) {
  $.ajax({
           url: getID,
           method: "GET"
     }).done(function(ID) {
     var giphyID = ID.data.id;
-    var queryURL = "http://api.giphy.com/v1/gifs/" + giphyID +"?api_key=dc6zaTOxFJmzC"
+    var queryURL = "https://api.giphy.com/v1/gifs/" + giphyID +"?api_key=dc6zaTOxFJmzC"
          $.ajax({
           url: queryURL,
           method: "GET"
